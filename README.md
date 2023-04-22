@@ -7,7 +7,9 @@ ___________
 ### Software versions
 
 ### Problems in the project:
-1.
+1. Displaying p tags in browser instead of hiding it and making the encapsulated text a paragraph style text.
+    Solution: use dangerouslySetInnerHTML. 
+    When dangerouslySetInnerHTML is used, React becomes aware of the HTML tags and renders them properly.
 2.
 
 ### How to use
