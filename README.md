@@ -10,7 +10,22 @@ ___________
 1. Displaying p tags in browser instead of hiding it and making the encapsulated text a paragraph style text.
     Solution: use dangerouslySetInnerHTML. 
     When dangerouslySetInnerHTML is used, React becomes aware of the HTML tags and renders them properly.
-2.
+2. Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'.
+    Solution: 
+        Images are usually blobs. target.value is usually for text. While images are usually in event.target.files
+        ``` 
+        // Incorrect:
+             const handleUpload = (event) => {
+                sendMessage(creds, chatId, { files: event.target.value, text: '' })
+        
+           }
+        // Correct: 
+                const handleUpload = (event) => {
+                    sendMessage(creds, chatId, { files: event.target.files , text: '' })
+        
+                }
+        ```
+
 
 ### How to use
 
