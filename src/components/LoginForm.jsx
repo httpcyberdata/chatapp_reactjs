@@ -4,6 +4,29 @@ const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const authObject = {
+            'Project-ID': 'f30ba91d-8868-484b-b6c3-bf2472893a52',
+            'User-Name': username,
+            'User-Secret': password
+        }
+
+        try {
+            await axios.get('https://api.chatengine.io/chats', { headers: authObject });
+            localStorage.setItem('username',  username);
+            localStorage.setItem('password', password);
+
+            window.location.reload();
+        } catch (error) {
+
+        }
+        // username || password => chatengine -> give message
+        // works out -> logged in
+        // error -> try with new username...
+    }
+
     return (
         <div className="wrapper">
             <div className="form">
@@ -11,9 +34,19 @@ const LoginForm = () => {
                     Chat Application
                 </h1>
                 <form onSubmit={handleSubmit}>
-                    
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />            
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required / >            
+                    <div align="center">
+                            <button type="submit" className="button">
+                                <span>
+                                    Start Chatting
+                                </span>
+                            </button>
+                    </div>
                 </form>
             </div>
         </div>
     )
 }
+
+export default LoginForm;

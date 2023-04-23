@@ -28,7 +28,7 @@ ___________
 
 
 ### How to use
-1. Navigate to chatengine.io, register an account, create a project and be ready to copy the project ID and secret key
+1. Navigate to chatengine.io, register an account, create a project, create users (username || password), copy userSecret and ProjectID
 
 ### Photos of project:
 ![](/public/chatapp_1.png);
