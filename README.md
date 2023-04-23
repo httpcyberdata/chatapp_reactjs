@@ -28,11 +28,18 @@ ___________
 
 
 ### How to use
+1. Navigate to chatengine.io, register an account, create a project and be ready to copy the project ID and secret key
 
 ### Photos of project:
+![](/public/chatapp_1.png);
+![](/public/chatapp_2.gif);
+![](/public/chatapp_3.png);
+![](/public/chatapp_4.png);
 
 ### Apps used:
 
 ### Coding styles I used:
 
 ### What I learned
+1. What dangerouslySetInnerHTML is and how it takes an object and returns the value without HTML tags.
+2. 
