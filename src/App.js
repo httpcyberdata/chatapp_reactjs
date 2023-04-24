@@ -11,8 +11,8 @@ const App = () => {
             height="100vh"
             projectID="
             f30ba91d-8868-484b-b6c3-bf2472893a52"
-            userName="omnirealm"
-            userSecret="hansdotter"
+            userName={localStorage.getItem('username')}
+            userSecret={localStorage.getItem('password')}
             renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}
              /> }
         />
