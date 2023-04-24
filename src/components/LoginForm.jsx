@@ -3,7 +3,7 @@ import axios from 'axios';
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
+    const [error, setError] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -20,11 +20,9 @@ const LoginForm = () => {
 
             window.location.reload();
         } catch (error) {
-
+            setError('Oops, incorrect credentials.')
         }
-        // username || password => chatengine -> give message
-        // works out -> logged in
-        // error -> try with new username...
+
     }
 
     return (
@@ -43,6 +41,9 @@ const LoginForm = () => {
                                 </span>
                             </button>
                     </div>
+                    <h2 className="error">
+                        {error}
+                    </h2>
                 </form>
             </div>
         </div>
