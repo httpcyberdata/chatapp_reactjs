@@ -35,6 +35,7 @@ ___________
 ![](/public/chatapp_2.gif);
 ![](/public/chatapp_3.png);
 ![](/public/chatapp_4.png);
+![](/public/chatapp_5.gif);
 
 ### Apps used:
 
